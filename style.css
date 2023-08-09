@@ -1,6 +1,19 @@
+@font-face {
+    font-family: Robot;
+    src: url(fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: Robot;
+    src: url(fonts/Roboto-Bold.ttf);
+    font-weight: bold;
+}
+
+
 body {
     padding: 0;
     margin: 0;
+    font-family: Robot;
 }
 
 .main-container {
@@ -28,7 +41,7 @@ body {
 
 .sidebar {
     display: grid;
-    grid-template-rows: 260px, auto;
+    grid-template-rows: 120px;
 }
 
 .dashboard {
@@ -40,15 +53,34 @@ body {
     font-size: xx-large;
     margin: auto;
     grid-row: 1 / 1;
+    padding: 0;
+    font-weight: bold;
 }
 
 .dashboard > img {
-    height: 100px;
+    height: 70px;
     width: auto;
 }
 
 .sidebar-bt {
     grid-row: 2 / -1;
     display: grid;
-    grid-template-rows: repeat(auto-fit, 1fr);
+    grid-template-rows: repeat(auto-fit, 50px);
+    padding-left: 40px;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+}
+
+.side-btns {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.side-btns > img {
+    height: 30px;
+    width: auto;
+    fill: white;
 }
