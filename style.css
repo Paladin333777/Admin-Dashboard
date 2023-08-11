@@ -113,6 +113,15 @@ img {
     border-radius: 20px;
     background-color: transparent;
     border: solid 1px black;
+    padding-left: 6px;
+}
+
+input:focus {
+    outline: none;
+    background-color: transparent;
+    border: none;
+    border-bottom: solid 1px black;
+    border-radius: 0;
 }
 
 .part-2 {
@@ -141,7 +150,7 @@ img {
 
 .part-3 {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 6fr;
     grid-template-rows: 1fr 1fr;
     align-items: center;
     justify-content: center;
@@ -154,7 +163,7 @@ img {
     border: solid 2px black;
     border-radius: 50%;
     grid-area: 1 / 1 / -1 / 1;
-    justify-self: end;
+    justify-self: self-end;
 }
 
 .greetings {
@@ -165,6 +174,7 @@ img {
     align-self: self-start;
     font-weight: bold;
     font-size: x-large;
+    
 }
 
 .part-4 {
@@ -205,6 +215,9 @@ img {
     height: 200px;
     border: solid 2px black;
     border-radius: 20px;
+    align-self: center;
+    justify-self: center;
+    background-color: #a2a974;
 }
 
 .news {
@@ -212,16 +225,35 @@ img {
     grid-template-rows: 1fr 1fr;
 }
 
-.ann-box {
+.ann-box, .tren-box{
     height: 300px;
     width: 300px;
     border: solid 2px black;
     border-radius: 20px;
+    background-color: #a2a974;
 }
 
-.tren-box {
-    height: 300px;
-    width: 300px;
-    border: solid 2px black;
-    border-radius: 20px;
+.project-con {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: xx-large;
+    padding: 6px;
+}
+
+.project-btn {
+    align-self: end;
+    justify-self: end;
+    grid-area: 2 / 3 / 2 / 3;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 10px;
+}
+
+.project-name {
+    grid-area: 1 / 1 / 1 / -1;
+    text-align: center;
 }
